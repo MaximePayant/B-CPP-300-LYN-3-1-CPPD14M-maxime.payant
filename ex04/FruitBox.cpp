@@ -34,7 +34,7 @@ bool FruitBox::putFruit(Fruit *fruit)
     FruitNode *fruitNode = new FruitNode(fruit);
 
     if (!_fruits.empty())
-        _fruits.back()->_next = fruitNode;
+        _fruits.back()->next = fruitNode;
     _fruits.push_back(fruitNode);
     return (true);
 }

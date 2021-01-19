@@ -21,7 +21,7 @@ int Mixer::mixeur(FruitBox &fruits)
 {
     size_t vitamins = 0;
 
-    for (FruitNode *tmp = fruits.head(); tmp; tmp = tmp->_next)
+    for (FruitNode *tmp = fruits.head(); tmp; tmp = tmp->next)
         vitamins += tmp->_fruit->getVitamins();
     return (vitamins);
 }
