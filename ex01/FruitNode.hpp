@@ -16,8 +16,11 @@ class FruitNode
     public:
         Fruit *_fruit;
         FruitNode *_next;
-        FruitNode(Fruit *fruit);
-        ~FruitNode();
+        FruitNode(Fruit *fruit) :
+        _fruit(fruit),
+        _next(nullptr)
+        {};
+        ~FruitNode() {delete (_fruit);};
 
 };
 
