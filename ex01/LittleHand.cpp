@@ -37,14 +37,24 @@ static bool is_banana(Fruit *fruit)
 void LittleHand::sortFruitBox(FruitBox &unsorted, FruitBox &lemons, FruitBox &bananas, FruitBox &limes)
 {
     Fruit *tmp;
+    int size = unsorted.nbFruits();
 
-    while (unsorted.head()) {
+    (void)bananas;
+    for (int ctr = 0; ctr < size; ctr += 1) {
         tmp = unsorted.pickFruit();
-        if (is_lime(tmp))
-            limes.putFruit(tmp);
-        else if (is_lemon(tmp))
-            lemons.putFruit(tmp);
-        else if (is_banana(tmp))
-            bananas.putFruit(tmp);
+        if (is_lime(tmp)) {
+            if (!limes.putFruit(tmp))
+                unsorted.putFruit(tmp);
+        }
+        else if (is_lemon(tmp)) {
+            if (!lemons.putFruit(tmp))
+                unsorted.putFruit(tmp);
+        }
+        else if (is_banana(tmp)) {
+            if (!bananas.putFruit(tmp))
+                unsorted.putFruit(tmp);
+        }
+        else
+            unsorted.putFruit(tmp);
     }
 }
