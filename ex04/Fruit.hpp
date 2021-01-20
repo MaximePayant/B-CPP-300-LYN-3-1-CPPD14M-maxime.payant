@@ -18,9 +18,7 @@ class Fruit
         std::string _name;
 
     public:
-        Fruit() = delete;
-        Fruit(const Fruit&) = delete;
-        Fruit(Fruit&&) = delete;
+        Fruit() : _name("fruit"), _vitamins(0) {};
         Fruit(const std::size_t& vitamins);
         virtual ~Fruit() {};
 

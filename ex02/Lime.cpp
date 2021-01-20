@@ -7,6 +7,7 @@
 
 #include "Lime.hpp"
 
-Lime::Lime() :
-Fruit(2)
-{}
+Lime::Lime()
+{
+    _vitamins = 2;
+}
