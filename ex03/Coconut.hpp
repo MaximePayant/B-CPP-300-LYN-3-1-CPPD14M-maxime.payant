@@ -17,6 +17,8 @@ class Coconut :
     public:
         Coconut();
 
+        std::string getName() const override { return ("coconut"); };
+
 };
 
 #endif // COCONUT_HPP

@@ -8,5 +8,5 @@
 #include "Coconut.hpp"
 
 Coconut::Coconut() :
-Fruit("coconut", 15)
+Fruit(15)
 {}
