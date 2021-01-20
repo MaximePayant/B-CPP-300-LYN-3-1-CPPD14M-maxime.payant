@@ -82,3 +82,10 @@ void LittleHand::plugMixer(MixerBase &mixer)
 {
     reinterpret_cast<Mixer*>(&mixer)->plug();
 }
+
+void LittleHand::injectVitamin(Fruit &f, int quantity)
+{
+    InTheMatrixFruit *tmp = reinterpret_cast<InTheMatrixFruit *>(&f);
+
+    tmp->vitamins = quantity;
+}

@@ -17,6 +17,8 @@ class Lime :
     public:
         Lime();
 
+        std::string getName() const override { return ("lime"); };
+
 };
 
 #endif // LIME_HPP

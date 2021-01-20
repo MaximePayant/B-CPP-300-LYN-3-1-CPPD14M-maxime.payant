@@ -7,7 +7,7 @@
 
 #include "Fruit.hpp"
 
-Fruit::Fruit(const std::string& name, const std::size_t& vitamins) :
-_name(name),
+Fruit::Fruit(const std::size_t& vitamins) :
+_name("fruit"),
 _vitamins(vitamins)
 {}

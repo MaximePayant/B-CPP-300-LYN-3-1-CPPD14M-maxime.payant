@@ -8,5 +8,5 @@
 #include "Lime.hpp"
 
 Lime::Lime() :
-Fruit("lime", 2)
+Fruit(2)
 {}

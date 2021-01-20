@@ -21,27 +21,12 @@ class Fruit
         Fruit() = delete;
         Fruit(const Fruit&) = delete;
         Fruit(Fruit&&) = delete;
-        Fruit(const std::string& name, const std::size_t& vitamins);
+        Fruit(const std::size_t& vitamins);
         virtual ~Fruit() {};
 
-        const std::string& getName() const     { return (_name);     };
+        virtual std::string getName() const { return (_name); };
         const std::size_t& getVitamins() const { return (_vitamins); };
 
-        static void injectVitamin(Fruit &f, int quantity);
-
 };
-
-struct InTheMatrixFruit
-{
-    virtual ~InTheMatrixFruit();
-    int vitamins;
-};
-
-void Fruit::injectVitamin(Fruit &f, int quantity)
-{
-    InTheMatrixFruit *tmp = reinterpret_cast<InTheMatrixFruit *>(&f);
-
-    tmp->vitamins = quantity;
-}
 
 #endif // FRUIT_HPP

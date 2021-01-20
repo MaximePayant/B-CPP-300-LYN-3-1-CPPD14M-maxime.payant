@@ -17,6 +17,8 @@ class Banana :
     public:
         Banana();
 
+        std::string getName() const override { return ("banana"); };
+
 };
 
 #endif // BANANA_HPP

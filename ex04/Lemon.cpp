@@ -8,5 +8,5 @@
 #include "Lemon.hpp"
 
 Lemon::Lemon() :
-Fruit("lemon", 3)
+Fruit(3)
 {}

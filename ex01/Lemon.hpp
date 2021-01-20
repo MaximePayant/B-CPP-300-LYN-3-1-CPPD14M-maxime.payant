@@ -17,6 +17,8 @@ class Lemon :
     public:
         Lemon();
 
+        std::string getName() const override { return ("lemon"); };
+
 };
 
 #endif // LEMON_HPP
