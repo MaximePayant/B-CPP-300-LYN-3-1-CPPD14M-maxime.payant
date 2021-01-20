@@ -8,8 +8,5 @@
 #include "Lime.hpp"
 
 Lime::Lime() :
-Lemon()
-{
-    _name = "lime";
-    _vitamins = 2;
-}
+Lemon("lime", 2)
+{}

@@ -14,6 +14,9 @@ class Lemon :
     public Fruit
 {
 
+    protected:
+        Lemon(const std::string& name, const std::size_t& vitamins);
+
     public:
         Lemon();
 
